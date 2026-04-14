@@ -142,57 +142,63 @@
 }
 
 
+
+/* =========================
+   FIX DESKTOP (PC NOTEBOOK)
+========================= */
+
 @media (min-width: 1024px) {
-  .galeria {
-    padding: 6rem 2rem;
+
+  body {
+    font-size: 16px;
   }
 
-  .carousel-track img {
-    height: 380px;
+  /* limita largura geral do conteúdo */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
   }
-}
 
-@media (min-width: 1024px) and (max-width: 1600px) {
-
+  /* HERO não ficar gigante demais */
   .hero-title {
     font-size: 5rem;
-    letter-spacing: 6px;
   }
 
   .hero-sub {
     font-size: 1.2rem;
   }
 
+  /* SOBRE com espaçamento melhor no PC */
   .sobre-texto {
-    padding: 3.5rem 3rem;
+    padding: 4rem 3rem;
   }
 
   .sobre-texto h2 {
     font-size: 2.2rem;
   }
 
-  .galeria-header h2 {
-    font-size: 2rem;
+  /* COMODIDADES mais equilibrado */
+  .comodidades-grid {
+    max-width: 1100px;
   }
 
+  /* GALERIA não ficar “esticada” */
+  .galeria {
+    padding: 4rem 2rem;
+  }
+
+  .galeria-header h2 {
+    font-size: 2.2rem;
+  }
+
+  /* CARROSSEL não ocupar tela gigante */
   .carousel-track img {
     height: 280px;
   }
 
-  .comodidades {
-    padding: 4rem 2rem;
-  }
-
-  .comod-item {
-    padding: 1.5rem 1rem;
-  }
-
+  /* RESERVA não ficar exagerada */
   .reserva {
     padding: 6rem 2rem;
-  }
-
-  .reserva h2 {
-    font-size: 2.5rem;
   }
 }
 
