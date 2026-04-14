@@ -154,10 +154,20 @@
   }
 
   /* limita largura geral do conteúdo */
-  section {
+  @media (min-width: 1024px) {
+  .sobre,
+  .comodidades,
+  .galeria,
+  .reserva {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+  .hero {
+    max-width: 100%;
+    margin: 0;
+  }
+}
 
   /* HERO não ficar gigante demais */
   .hero-title {
@@ -224,11 +234,6 @@
 }
 
 /* linha das imagens */
-.carousel-track {
-  display: flex;
-  gap: 1rem;
-  animation: scroll 25s linear infinite;
-}
 
 /* imagens reais */
 .carousel-track img {
