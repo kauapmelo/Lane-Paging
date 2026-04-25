@@ -323,7 +323,9 @@
     display: flex; gap: 6px;
     animation: marquee 30s linear infinite;
   }
+  @media (hover: hover) {
   .carousel-track:hover { animation-play-state: paused; }
+}
   @media (max-width: 768px) {
     .carousel-track { animation-duration: 14s; gap: 5px; }
   }
