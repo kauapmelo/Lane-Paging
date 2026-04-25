@@ -811,14 +811,12 @@
   }
   raf = requestAnimationFrame(step);
 
-  // pause no hover (só desktop)
-  track.addEventListener('mouseenter', () => { if (!isMobile()) paused = true; });
-  track.addEventListener('mouseleave', () => { paused = false; });
-
-  // zoom no touch
+   // pause + zoom no hover/touch por imagem
   track.querySelectorAll('img').forEach(img => {
-    img.addEventListener('touchstart', () => img.classList.add('touched'), { passive: true });
-    img.addEventListener('touchend',   () => setTimeout(() => img.classList.remove('touched'), 400), { passive: true });
+    img.addEventListener('mouseenter', () => { paused = true; img.classList.add('touched'); });
+    img.addEventListener('mouseleave', () => { paused = false; img.classList.remove('touched'); });
+    img.addEventListener('touchstart', () => { paused = true; img.classList.add('touched'); }, { passive: true });
+    img.addEventListener('touchend',   () => { setTimeout(() => { paused = false; img.classList.remove('touched'); }, 600); }, { passive: true });
   });
 </script>
 </body>
